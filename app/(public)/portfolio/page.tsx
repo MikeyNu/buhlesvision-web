@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { getProjects } from "@/lib/data/projects";
+import { isRemoteImageSrc } from "@/lib/utils/image-src";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -75,6 +76,7 @@ export default async function PortfolioPage({
                     className="h-full w-full object-cover opacity-40 grayscale transition-all duration-1000 group-hover:scale-105 group-hover:opacity-60"
                     height={1000}
                     src={project.coverImage}
+                    unoptimized={isRemoteImageSrc(project.coverImage)}
                     width={800}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent" />
@@ -131,6 +133,7 @@ export default async function PortfolioPage({
                     className="h-full w-full object-cover opacity-30 grayscale transition-all duration-1000 group-hover:scale-105 group-hover:opacity-50"
                     fill
                     src={filteredProjects[4].coverImage}
+                    unoptimized={isRemoteImageSrc(filteredProjects[4].coverImage)}
                   />
                   <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                     <span className="hidden text-[12rem] font-black uppercase tracking-tighter text-primary/10 md:block md:text-[20rem]">

@@ -3,6 +3,7 @@ import { cache } from "react";
 import { portfolioSeedProjects } from "@/lib/content/site-content";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
 import type { PortfolioProject } from "@/lib/types";
+import { normalizeImageSrc } from "@/lib/utils/image-src";
 
 function mapProjectRowToModel(row: {
   slug: string;
@@ -26,7 +27,7 @@ function mapProjectRowToModel(row: {
     scope: row.scope,
     impact: row.impact,
     focus: row.focus,
-    coverImage: row.cover_image,
+    coverImage: normalizeImageSrc(row.cover_image) || "/images/texture-grain.png",
     excerpt: row.excerpt,
     year: row.year,
     body: row.body,

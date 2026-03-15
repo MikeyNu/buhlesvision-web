@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { getProjectBySlug, getProjects } from "@/lib/data/projects";
+import { isRemoteImageSrc } from "@/lib/utils/image-src";
 
 type PortfolioDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -63,6 +64,7 @@ export default async function PortfolioDetailPage({
             className="h-full w-full object-cover opacity-70 grayscale"
             fill
             src={project.coverImage}
+            unoptimized={isRemoteImageSrc(project.coverImage)}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent" />
         </div>
