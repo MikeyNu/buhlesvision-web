@@ -10,6 +10,23 @@ export const metadata: Metadata = {
   description: "Buhle's Vision agency story, philosophy, and core services.",
 };
 
+const cofounders = [
+  {
+    name: "Mthokozisi Sanele Mbakane",
+    role: "Cofounder & Creative Director, Buhles Vision",
+    description:
+      "Mthokozisi is a results-driven creative leader with a passion for digital innovation. As Cofounder and Creative Director of Buhles Vision, he drives the agency's strategic vision and oversees creative direction, ensuring impactful marketing solutions for clients.",
+    marker: "MSM",
+  },
+  {
+    name: "Tshepiso Pitso",
+    role: "Cofounder & Operational Director, Buhle's Vision",
+    description:
+      "Tshepiso is a strategic and results-oriented leader with a passion for operational excellence. As Operational Director of Buhle's Vision, she ensures that every project runs seamlessly, overseeing processes, client delivery, and day-to-day operations to guarantee impactful outcomes for clients.",
+    marker: "TP",
+  },
+] as const;
+
 export default function AboutPage() {
   return (
     <div className="pb-24 pt-32">
@@ -137,37 +154,44 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto mb-32 w-full max-w-7xl px-6 lg:mb-48">
-        <div className="editorial-grid items-center">
-          <div className="col-span-full mb-12 md:col-span-5 md:mb-0">
-            <div className="group relative">
-              <div className="absolute -inset-4 rounded-xl bg-primary/10 blur-2xl transition-all duration-500 group-hover:bg-primary/20" />
-              <Image
-                alt="Elegant professional woman portrait in high-end studio lighting"
-                className="relative w-full rounded-xl grayscale transition-all duration-700 hover:grayscale-0"
-                height={1000}
-                src="/images/about-founder.jpg"
-                width={700}
-              />
-            </div>
-          </div>
-          <div className="col-span-full md:col-span-6 md:col-start-7">
-            <span className="mb-8 block text-xs font-bold uppercase tracking-[0.3em] text-primary">
-              Founder&apos;s Note
+        <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+          <div>
+            <span className="mb-4 block text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Leadership
             </span>
-            <blockquote className="mb-8 text-2xl font-light italic leading-snug md:text-4xl">
-              &quot;Design is not just what we see, but the narrative we create
-              between the consumer and the craft. We are here to make that
-              narrative unforgettable.&quot;
-            </blockquote>
-            <div>
-              <p className="text-xl font-bold uppercase tracking-widest">
-                Buhle Ndlovu
-              </p>
-              <p className="font-medium text-stone-500">
-                Creative Director &amp; Founder
-              </p>
-            </div>
+            <h2 className="text-5xl font-extrabold tracking-tighter md:text-6xl">
+              Two Co-Founders, One Vision
+            </h2>
           </div>
+          <p className="max-w-xl text-lg font-light leading-relaxed text-stone-400">
+            Buhle&apos;s Vision is led by two co-founders who align creative
+            direction with operational precision to deliver measurable growth.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {cofounders.map((cofounder, index) => (
+            <article
+              className="group relative overflow-hidden rounded-xl border border-primary/20 bg-background-deepest p-8 md:p-10"
+              key={cofounder.name}
+            >
+              <div className="pointer-events-none absolute -right-6 -top-6 text-8xl font-black uppercase text-primary/10 transition-transform duration-500 group-hover:scale-105">
+                {cofounder.marker}
+              </div>
+              <div className="pointer-events-none absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-primary/30 to-transparent" />
+              <span className="mb-6 inline-flex rounded-full border border-primary/40 px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
+                Co-Founder {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="mb-3 text-3xl font-extrabold uppercase tracking-tight md:text-4xl">
+                {cofounder.name}
+              </h3>
+              <p className="mb-6 border-l-2 border-primary pl-4 text-sm font-semibold uppercase tracking-wider text-stone-300">
+                {cofounder.role}
+              </p>
+              <p className="font-light leading-relaxed text-stone-400">
+                {cofounder.description}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -198,4 +222,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
