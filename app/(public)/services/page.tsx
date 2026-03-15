@@ -8,7 +8,7 @@ const plans = [
   {
     label: "Foundation",
     name: "Starter",
-    price: "$1,200",
+    price: "R1 200",
     suffix: "/mo",
     description:
       "Essential digital presence for emerging luxury brands and boutiques.",
@@ -18,7 +18,7 @@ const plans = [
   {
     label: "Scalability",
     name: "Growth",
-    price: "$2,800",
+    price: "R2 800",
     suffix: "/mo",
     description:
       "Aggressive growth tactics focusing on community and video reach.",
@@ -28,7 +28,7 @@ const plans = [
   {
     label: "Expansion",
     name: "Premium",
-    price: "$4,500",
+    price: "R4 500",
     suffix: "/mo",
     description:
       "Comprehensive high-frequency content strategy with premium assets.",
@@ -208,21 +208,21 @@ export default function ServicesPage() {
           {[
             {
               title: "Brand Identity",
-              price: "Starting from $3,500",
+              price: "Starting from R3 500",
               image: "/images/services-branding.jpg",
               description:
                 "Logo suites, typography, color systems, and comprehensive brand guidelines for luxury positioning.",
             },
             {
               title: "Creative Direction",
-              price: "Starting from $2,000",
+              price: "Starting from R2 000",
               image: "/images/services-photoshoot.jpg",
               description:
                 "Full-day editorial photoshoots, UGC curation, and high-fashion creative conceptualization.",
             },
             {
               title: "Web Experiences",
-              price: "Starting from $5,000",
+              price: "Starting from R5 000",
               image: "/images/services-web.jpg",
               description:
                 "Immersive, high-performance web design and development for premium digital storefronts.",
