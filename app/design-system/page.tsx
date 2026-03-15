@@ -4,6 +4,10 @@ import Link from "next/link";
 
 import { BrandLockup } from "@/components/site/brand-lockup";
 import { MaterialIcon } from "@/components/site/material-icon";
+import {
+  COMPANY_FACEBOOK_URL,
+  COMPANY_INSTAGRAM_URL,
+} from "@/lib/content/company";
 
 export const metadata: Metadata = {
   title: "Design System",
@@ -236,7 +240,8 @@ export default function DesignSystemPage() {
           <div className="flex gap-6 text-xs uppercase tracking-widest">
             <a href="https://linkedin.com">LinkedIn</a>
             <a href="https://behance.net">Behance</a>
-            <a href="https://instagram.com">Instagram</a>
+            <a href={COMPANY_INSTAGRAM_URL}>Instagram</a>
+            <a href={COMPANY_FACEBOOK_URL}>Facebook</a>
           </div>
         </div>
       </footer>

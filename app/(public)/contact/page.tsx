@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 
 import { ContactForm } from "@/components/site/contact-form";
+import { StudioMap } from "@/components/site/studio-map";
+import {
+  COMPANY_EMAIL,
+  COMPANY_EMAIL_MAILTO,
+  COMPANY_INSTAGRAM_URL,
+} from "@/lib/content/company";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -27,7 +32,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           <span className="text-primary">YOUR VISION.</span>
         </h1>
         <div className="pointer-events-none absolute -left-20 -top-10 -z-10 hidden text-[180px] font-black uppercase opacity-20 lg:block">
-          <span className="text-transparent [text-shadow:0_0_0_rgba(255,255,255,0.08)]">
+          <span className="contact-watermark-text text-transparent">
             Contact
           </span>
         </div>
@@ -46,9 +51,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 </p>
                 <a
                   className="break-all text-3xl font-medium transition-colors hover:text-primary md:text-4xl"
-                  href="mailto:info@buhlesvision.com"
+                  href={COMPANY_EMAIL_MAILTO}
                 >
-                  info@buhlesvision.com
+                  {COMPANY_EMAIL}
                 </a>
               </div>
               <div>
@@ -57,7 +62,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 </p>
                 <a
                   className="text-3xl font-medium transition-colors hover:text-primary md:text-4xl"
-                  href="https://instagram.com"
+                  href={COMPANY_INSTAGRAM_URL}
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -95,18 +100,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             </div>
           </div>
 
-          <div className="relative h-64 w-full overflow-hidden rounded-xl border border-slate-800">
-            <Image
-              alt="Abstract dark minimalist map graphic of Cape Town"
-              className="h-full w-full object-cover opacity-50 grayscale transition-all duration-700 hover:grayscale-0"
-              fill
-              src="/images/contact-map.jpg"
-            />
-            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-              <div className="h-4 w-4 animate-ping rounded-full bg-primary" />
-              <div className="absolute h-4 w-4 rounded-full bg-primary" />
-            </div>
-          </div>
+          <StudioMap />
         </section>
 
         <section className="rounded-2xl border border-brand-blue/30 bg-white/5 p-8 backdrop-blur-sm md:p-12">

@@ -26,7 +26,6 @@ export function SiteHeader() {
           <BrandLockup
             iconSize="sm"
             nameClassName="text-lg"
-            subtitleClassName="text-[6px] tracking-[0.14em]"
           />
         </Link>
 

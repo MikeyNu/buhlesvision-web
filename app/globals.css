@@ -52,6 +52,14 @@ textarea {
   transition-property: color, background-color, border-color, opacity, transform;
 }
 
+.bg-texture-grain {
+  background-image: url("/images/texture-grain.png");
+}
+
+.contact-watermark-text {
+  text-shadow: 0 0 0 rgba(255, 255, 255, 0.08);
+}
+
 .editorial-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));

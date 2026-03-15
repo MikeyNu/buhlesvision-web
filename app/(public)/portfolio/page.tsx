@@ -28,8 +28,7 @@ export default async function PortfolioPage({
     <div className="relative bg-background-deep pb-24 text-slate-100">
       <div
         aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-10 opacity-[0.03]"
-        style={{ backgroundImage: "url('/images/texture-grain.png')" }}
+        className="bg-texture-grain pointer-events-none fixed inset-0 z-10 opacity-[0.03]"
       />
 
       <header className="relative border-b border-white/5 px-6 pb-24 pt-52">

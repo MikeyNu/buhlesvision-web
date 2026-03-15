@@ -1,4 +1,5 @@
 import type { PortfolioProject } from "@/lib/types";
+import { COMPANY_FACEBOOK_URL, COMPANY_INSTAGRAM_URL } from "./company";
 
 export const navLinks = [
   { href: "/services", label: "Services" },
@@ -8,10 +9,10 @@ export const navLinks = [
 ] as const;
 
 export const socialLinks = [
-  { href: "https://www.instagram.com", label: "Instagram" },
+  { href: COMPANY_INSTAGRAM_URL, label: "Instagram" },
   { href: "https://www.linkedin.com", label: "LinkedIn" },
   { href: "https://www.behance.net", label: "Behance" },
-  { href: "https://x.com", label: "Twitter (X)" },
+  { href: COMPANY_FACEBOOK_URL, label: "Facebook" },
 ] as const;
 
 export const homeBrands = [

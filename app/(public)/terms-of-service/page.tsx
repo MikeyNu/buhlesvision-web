@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { COMPANY_BRAND_NAME, COMPANY_LEGAL_NAME } from "@/lib/content/company";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -13,7 +14,8 @@ export default function TermsOfServicePage() {
       <div className="space-y-6 text-stone-300">
         <p>
           Project timelines, deliverables, and payment terms are confirmed in
-          signed statements of work between Buhle&apos;s Vision and each client.
+          signed statements of work between {COMPANY_LEGAL_NAME} trading as{" "}
+          {COMPANY_BRAND_NAME} and each client.
         </p>
         <p>
           Portfolio materials may be publicly displayed unless confidentiality is

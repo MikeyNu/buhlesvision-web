@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { MaterialIcon } from "@/components/site/material-icon";
+import {
+  COMPANY_EMAIL,
+  COMPANY_EMAIL_MAILTO,
+  COMPANY_FACEBOOK_URL,
+  COMPANY_INSTAGRAM_URL,
+} from "@/lib/content/company";
 import { homeBrands, homeServices } from "@/lib/content/site-content";
 
 export default function HomePage() {
@@ -231,9 +237,9 @@ export default function HomePage() {
               </h2>
               <a
                 className="border-b-4 border-white pb-2 text-2xl font-bold md:text-4xl"
-                href="mailto:hello@buhlesvision.com"
+                href={COMPANY_EMAIL_MAILTO}
               >
-                hello@buhlesvision.com
+                {COMPANY_EMAIL}
               </a>
             </div>
             <div className="col-span-12 flex flex-col justify-end lg:col-span-4">
@@ -241,7 +247,7 @@ export default function HomePage() {
                 Join our exclusive network of forward-thinking brands.
               </p>
               <div className="flex gap-6 text-xs font-bold uppercase tracking-widest">
-                <a href="https://instagram.com" rel="noreferrer" target="_blank">
+                <a href={COMPANY_INSTAGRAM_URL} rel="noreferrer" target="_blank">
                   Instagram
                 </a>
                 <a href="https://linkedin.com" rel="noreferrer" target="_blank">
@@ -249,6 +255,9 @@ export default function HomePage() {
                 </a>
                 <a href="https://behance.net" rel="noreferrer" target="_blank">
                   Behance
+                </a>
+                <a href={COMPANY_FACEBOOK_URL} rel="noreferrer" target="_blank">
+                  Facebook
                 </a>
               </div>
             </div>

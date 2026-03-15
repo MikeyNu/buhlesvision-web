@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { COMPANY_EMAIL, COMPANY_EMAIL_MAILTO, COMPANY_LEGAL_NAME } from "@/lib/content/company";
 import { socialLinks } from "@/lib/content/site-content";
 import { BrandLockup } from "./brand-lockup";
 
@@ -43,10 +44,14 @@ export function SiteFooter() {
               Studio
             </h4>
             <ul className="space-y-4 text-stone-400">
-              <li>hello@buhlevision.com</li>
+              <li>
+                <a className="transition-colors hover:text-primary" href={COMPANY_EMAIL_MAILTO}>
+                  {COMPANY_EMAIL}
+                </a>
+              </li>
               <li>+27 (0) 11 000 0000</li>
               <li className="pt-4 text-xs opacity-60">
-                © 2026 BUHLE&apos;S VISION AGENCY
+                © 2026 {COMPANY_LEGAL_NAME}
               </li>
             </ul>
           </div>
