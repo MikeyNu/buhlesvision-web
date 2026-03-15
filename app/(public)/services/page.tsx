@@ -8,46 +8,117 @@ const plans = [
   {
     label: "Foundation",
     name: "Starter",
-    price: "R1 200",
+    price: "R3 000",
     suffix: "/mo",
     description:
-      "Essential digital presence for emerging luxury brands and boutiques.",
-    features: ["8 Static Posts", "Basic Strategy", "Community Mgmt"],
+      "Basic package for getting started with marketing essentials.",
+    features: [
+      "2 posts per week (photos / graphics)",
+      "2 short videos per month",
+      "Basic community management",
+    ],
     highlighted: false,
   },
   {
     label: "Scalability",
     name: "Growth",
-    price: "R2 800",
+    price: "R6 000",
     suffix: "/mo",
     description:
-      "Aggressive growth tactics focusing on community and video reach.",
-    features: ["12 Static + 4 Reels", "Monthly Audit", "Influencer Outreach"],
+      "Enhanced features for businesses ready to expand their reach.",
+    features: [
+      "4 posts per week + captions + hashtags",
+      "8 edited videos per month",
+      "Smart chatbot integration",
+    ],
     highlighted: false,
   },
   {
     label: "Expansion",
     name: "Premium",
-    price: "R4 500",
+    price: "R15 000",
     suffix: "/mo",
     description:
-      "Comprehensive high-frequency content strategy with premium assets.",
-    features: ["20 Posts + 8 Reels", "Weekly Analytics", "Paid Ad Management"],
+      "Comprehensive support for maximum impact in marketing efforts.",
+    features: [
+      "5+ posts per week + content calendar",
+      "12 videos per month (advanced editing)",
+      "Advanced AI chatbot + WhatsApp automation",
+    ],
     highlighted: true,
   },
   {
     label: "Custom",
     name: "Enterprise",
-    price: "Custom",
-    suffix: "/starting",
+    price: "R30 000",
+    suffix: "/mo",
     description:
-      "Bespoke 360° strategy for established industry leaders and global brands.",
+      "Tailored solutions for large organizations with specific needs.",
     features: [
-      "Dedicated Account Mgr",
-      "On-site Content Days",
-      "Global PR Sync",
+      "Fully managed social content strategy",
+      "20+ videos monthly + AI variations",
+      "24/7 response team + crisis management",
     ],
     highlighted: false,
+  },
+] as const;
+
+const comparisonRows = [
+  {
+    feature: "Static Posts: Feed Posts",
+    starter: "2 posts per week (photos / graphics)",
+    growth: "4 posts per week with captions + hashtags",
+    premium: "5+ posts per week with content calendar + strategy",
+    enterprise: "Fully managed social content plan + creative direction",
+  },
+  {
+    feature: "Video Content",
+    starter: "2 short videos per month",
+    growth: "8 videos per month (edited + optimized)",
+    premium: "12 videos per month (advanced editing + hooks)",
+    enterprise: "20+ videos monthly across platforms + AI variations",
+  },
+  {
+    feature: "Paid Promotions",
+    starter: "Client funded ads (optional)",
+    growth: "2 free paid promos (24hr) per month — agency funded",
+    premium: "4 paid promos per month (24–48hr) — agency funded",
+    enterprise: "Continuous ads management with custom monthly budget",
+  },
+  {
+    feature: "Chatbot Automation",
+    starter: "—",
+    growth: "Smart chatbot integration (1 channel)",
+    premium: "Advanced AI chatbot + WhatsApp automation",
+    enterprise: "Full CRM automation + lead scoring + reporting + advanced AI chatbot",
+  },
+  {
+    feature: "Community Management",
+    starter: "Basic (comment replies only)",
+    growth: "Replies + DM management (working hours)",
+    premium: "Full community engagement + sentiment monitoring",
+    enterprise: "24/7 social response team + crisis management",
+  },
+  {
+    feature: "Monthly Reports",
+    starter: "Basic insights and metrics",
+    growth: "Detailed analytics + recommendations",
+    premium: "Performance report + quarterly strategy review",
+    enterprise: "Real-time dashboard + dedicated data analyst",
+  },
+  {
+    feature: "Strategy Meetings",
+    starter: "Email support only",
+    growth: "1 virtual session/month + 3 email support briefs",
+    premium: "2 sessions per month (virtual/in-person)",
+    enterprise: "Weekly performance + strategy meetings",
+  },
+  {
+    feature: "Additional Perks",
+    starter: "—",
+    growth: "Free chatbot setup + priority email support + lead tracking",
+    premium: "Priority support + creative consultation + lead tracking",
+    enterprise: "Dedicated account manager + PR + influencer campaigns + lead tracking",
   },
 ] as const;
 
@@ -150,36 +221,23 @@ export default function ServicesPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-off-white/10">
-              <tr>
-                <td className="py-6 text-sm font-semibold uppercase tracking-tight text-off-white/40">
-                  Content &amp; Visuals
-                </td>
-                <td />
-                <td />
-                <td />
-                <td />
-              </tr>
-              <tr>
-                <td className="py-6 text-sm">Static Posts (Monthly)</td>
-                <td className="py-6 text-center text-off-white/60">8</td>
-                <td className="py-6 text-center text-off-white/60">12</td>
-                <td className="py-6 text-center font-bold text-white">20</td>
-                <td className="py-6 text-center text-off-white/60">Unlimited</td>
-              </tr>
-              <tr>
-                <td className="py-6 text-sm">Video Content / Reels</td>
-                <td className="py-6 text-center text-off-white/60">—</td>
-                <td className="py-6 text-center text-off-white/60">4</td>
-                <td className="py-6 text-center font-bold text-white">8</td>
-                <td className="py-6 text-center text-off-white/60">Custom</td>
-              </tr>
-              <tr>
-                <td className="py-6 text-sm">Professional Editing</td>
-                <td className="py-6 text-center text-off-white/20">✕</td>
-                <td className="py-6 text-center text-primary">✓</td>
-                <td className="py-6 text-center text-primary">✓</td>
-                <td className="py-6 text-center text-primary">✓</td>
-              </tr>
+              {comparisonRows.map((row) => (
+                <tr key={row.feature}>
+                  <td className="py-6 text-sm font-semibold">{row.feature}</td>
+                  <td className="py-6 text-center text-xs text-off-white/60 md:text-sm">
+                    {row.starter}
+                  </td>
+                  <td className="py-6 text-center text-xs text-off-white/60 md:text-sm">
+                    {row.growth}
+                  </td>
+                  <td className="py-6 text-center text-xs font-bold text-white md:text-sm">
+                    {row.premium}
+                  </td>
+                  <td className="py-6 text-center text-xs text-off-white/60 md:text-sm">
+                    {row.enterprise}
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
