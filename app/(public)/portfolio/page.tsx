@@ -25,12 +25,7 @@ export default async function PortfolioPage({
       : projects;
 
   return (
-    <div className="relative bg-background-deep pb-24 text-slate-100">
-      <div
-        aria-hidden="true"
-        className="bg-texture-grain pointer-events-none fixed inset-0 z-10 opacity-[0.03]"
-      />
-
+    <div className="relative bg-background-dark pb-24 text-slate-100">
       <header className="relative border-b border-white/5 px-6 pb-24 pt-52">
         <div className="mx-auto max-w-7xl">
           <h1 className="mb-12 text-8xl font-extrabold leading-[0.85] tracking-tighter md:text-[10rem]">
@@ -83,7 +78,7 @@ export default async function PortfolioPage({
                     src={project.coverImage}
                     width={800}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background-deep via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent" />
                   {index === 0 ? (
                     <div className="absolute left-8 top-8">
                       <span className="rounded-full bg-primary px-4 py-1.5 text-[10px] font-bold uppercase tracking-tighter text-white">
@@ -143,7 +138,7 @@ export default async function PortfolioPage({
                       {filteredProjects[4].title}
                     </span>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-background-deep via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent" />
                 </div>
                 <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-12 md:flex-row">
                   <div className="flex-1">

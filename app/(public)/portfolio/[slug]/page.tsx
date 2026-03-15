@@ -40,7 +40,7 @@ export default async function PortfolioDetailPage({
   }
 
   return (
-    <article className="bg-background-deep pb-24 pt-32 text-slate-100">
+    <article className="bg-background-dark pb-24 pt-32 text-slate-100">
       <header className="mx-auto max-w-7xl px-6">
         <Link
           className="mb-8 inline-flex text-xs font-bold uppercase tracking-widest text-primary"
@@ -64,7 +64,7 @@ export default async function PortfolioDetailPage({
             fill
             src={project.coverImage}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background-deep via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent" />
         </div>
       </section>
 
