@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-import { COMPANY_EMAIL, COMPANY_EMAIL_MAILTO, COMPANY_LEGAL_NAME } from "@/lib/content/company";
+import {
+  COMPANY_EMAIL,
+  COMPANY_EMAIL_MAILTO,
+  COMPANY_LEGAL_NAME,
+  COMPANY_PHONE,
+  COMPANY_PHONE_TEL,
+} from "@/lib/content/company";
 import { socialLinks } from "@/lib/content/site-content";
 import { BrandLockup } from "./brand-lockup";
 
@@ -49,7 +55,11 @@ export function SiteFooter() {
                   {COMPANY_EMAIL}
                 </a>
               </li>
-              <li>+27 (0) 11 000 0000</li>
+              <li>
+                <a className="transition-colors hover:text-primary" href={COMPANY_PHONE_TEL}>
+                  {COMPANY_PHONE}
+                </a>
+              </li>
               <li className="pt-4 text-xs opacity-60">
                 © 2026 {COMPANY_LEGAL_NAME}
               </li>
