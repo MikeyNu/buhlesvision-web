@@ -1,26 +1,63 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-dark: #05070d;
+  --background-light: #f8f6f5;
+  --background-deep: #05070d;
+  --background-deepest: #05070d;
+  --primary: #ff531f;
+  --brand-blue: #1a2a40;
+  --neutral-slate: #3d322e;
+  --off-white: #f2f1ee;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-background-dark: var(--background-dark);
+  --color-background-light: var(--background-light);
+  --color-background-deep: var(--background-deep);
+  --color-background-deepest: var(--background-deepest);
+  --color-brand-blue: var(--brand-blue);
+  --color-neutral-slate: var(--neutral-slate);
+  --color-off-white: var(--off-white);
+  --font-sans: var(--font-plus-jakarta-sans);
+  --font-editorial: var(--font-playfair-display);
+  --font-brand: var(--font-league-spartan);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --shadow-brand: 0 12px 32px rgba(255, 83, 31, 0.18);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  min-height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-dark);
+  color: #f5f5f4;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition-duration: 200ms;
+  transition-property: color, background-color, border-color, opacity, transform;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.material-icons,
+.material-icons-outlined {
+  font-size: inherit;
 }
