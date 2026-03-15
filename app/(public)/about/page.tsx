@@ -52,7 +52,7 @@ export default function AboutPage() {
             <div className="flex items-center gap-4">
               <span className="h-px w-12 bg-primary" />
               <span className="text-sm uppercase tracking-widest text-white">
-                Johannesburg • London • Digital
+                Kempton Park • Gauteng • Digital
               </span>
             </div>
           </div>

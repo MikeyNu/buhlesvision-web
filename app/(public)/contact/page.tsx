@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/site/contact-form";
 import { StudioMap } from "@/components/site/studio-map";
 import {
+  COMPANY_ADDRESS_LINE_1,
+  COMPANY_ADDRESS_LINE_2,
   COMPANY_EMAIL,
   COMPANY_EMAIL_MAILTO,
   COMPANY_INSTAGRAM_URL,
@@ -74,30 +76,13 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
           <div className="border-t border-slate-800 pt-10">
             <h3 className="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Studio Presence
+              Address
             </h3>
-            <div className="grid grid-cols-2 gap-8">
-              <div>
-                <p className="mb-2 text-xs uppercase tracking-widest text-slate-400">
-                  Global HQ
-                </p>
-                <p className="text-lg leading-relaxed">
-                  Cape Town, SA
-                  <br />
-                  V&amp;A Waterfront
-                </p>
-              </div>
-              <div>
-                <p className="mb-2 text-xs uppercase tracking-widest text-slate-400">
-                  Local Office
-                </p>
-                <p className="text-lg leading-relaxed">
-                  Johannesburg, SA
-                  <br />
-                  Sandton Central
-                </p>
-              </div>
-            </div>
+            <p className="text-lg leading-relaxed text-slate-200">
+              {COMPANY_ADDRESS_LINE_1}
+              <br />
+              {COMPANY_ADDRESS_LINE_2}
+            </p>
           </div>
 
           <StudioMap />
