@@ -29,14 +29,14 @@ const cofounders = [
 
 export default function AboutPage() {
   return (
-    <div className="pb-24 pt-32">
-      <section className="mx-auto mb-32 w-full max-w-7xl px-6 lg:mb-48">
+    <div className="pb-20 pt-24 md:pb-24 md:pt-32">
+      <section className="site-container section-space-y-tight">
         <div className="editorial-grid gap-6">
           <div className="col-span-full lg:col-span-10">
             <span className="mb-8 block text-xs font-bold uppercase tracking-[0.3em] text-primary">
               About the Agency
             </span>
-            <h1 className="mb-12 text-5xl font-extrabold leading-[1.1] md:text-7xl lg:text-8xl">
+            <h1 className="mb-12 text-4xl font-extrabold leading-[1.1] sm:text-5xl md:text-7xl lg:text-8xl">
               Crafting the{" "}
               <span className="font-light italic text-primary/80">
                 aesthetic future
@@ -45,7 +45,7 @@ export default function AboutPage() {
             </h1>
           </div>
           <div className="col-span-full lg:col-span-6 lg:col-start-6">
-            <p className="text-xl font-light leading-relaxed text-stone-400 md:text-2xl lg:indent-16">
+            <p className="text-lg font-light leading-relaxed text-stone-400 sm:text-xl md:text-2xl lg:indent-16">
               Buhle&apos;s Vision is a creative powerhouse operating at the
               intersection of high-end editorial aesthetics and functional
               digital strategy. We don&apos;t just build brands; we cultivate visual
@@ -55,7 +55,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto mb-32 w-full max-w-[1400px] px-6 lg:mb-48">
+      <section className="site-container-wide section-space-y-tight">
         <div className="group relative aspect-[21/9] overflow-hidden rounded-xl">
           <Image
             alt="Modern minimalist office interior with orange accents"
@@ -65,7 +65,7 @@ export default function AboutPage() {
             width={1800}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark/60 to-transparent" />
-          <div className="absolute bottom-10 left-10">
+          <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 md:bottom-10 md:left-10">
             <div className="flex items-center gap-4">
               <span className="h-px w-12 bg-primary" />
               <span className="text-sm uppercase tracking-widest text-white">
@@ -76,9 +76,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto mb-32 w-full max-w-7xl px-6 lg:mb-48">
+      <section className="site-container section-space-y-tight">
         <div className="mb-16 flex flex-col items-end justify-between gap-8 md:flex-row">
-          <h2 className="text-4xl font-bold uppercase tracking-tight md:text-5xl">
+          <h2 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl md:text-5xl">
             Our Philosophy
           </h2>
           <p className="max-w-md font-medium text-stone-400">
@@ -112,20 +112,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mb-32 overflow-hidden bg-background-deepest py-32 lg:mb-48 lg:py-48">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="section-space-y overflow-hidden bg-background-deepest">
+        <div className="site-container">
           <div className="mb-24">
             <span className="mb-4 block text-xs font-bold uppercase tracking-[0.3em] text-primary">
               What We Do
             </span>
-            <h2 className="text-5xl font-extrabold tracking-tighter md:text-6xl">
+            <h2 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl">
               Core Services
             </h2>
           </div>
           <div className="space-y-0">
             {coreServicesList.map((service, index) => (
               <Link
-                className={`group flex cursor-pointer flex-col items-center justify-between border-white/10 py-12 transition-all duration-500 hover:border-primary md:flex-row ${
+                className={`group flex cursor-pointer flex-col items-start justify-between gap-6 border-white/10 py-12 transition-all duration-500 hover:border-primary md:flex-row md:items-center ${
                   index === 0
                     ? "border-t"
                     : index === coreServicesList.length - 1
@@ -153,13 +153,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto mb-32 w-full max-w-7xl px-6 lg:mb-48">
+      <section className="site-container section-space-y-tight">
         <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div>
             <span className="mb-4 block text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Leadership
             </span>
-            <h2 className="text-5xl font-extrabold tracking-tighter md:text-6xl">
+            <h2 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl">
               Two Co-Founders, One Vision
             </h2>
           </div>
@@ -195,9 +195,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto mb-24 w-full max-w-5xl px-6">
-        <div className="rounded-xl bg-primary p-12 text-center text-white md:p-24">
-          <h2 className="mb-8 text-4xl font-extrabold tracking-tighter md:text-6xl">
+      <section className="site-container-reading mb-24">
+        <div className="rounded-xl bg-primary p-8 text-center text-white sm:p-12 md:p-24">
+          <h2 className="mb-8 text-3xl font-extrabold tracking-tighter sm:text-4xl md:text-6xl">
             Ready to elevate your vision?
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-xl text-white/80 md:text-2xl">

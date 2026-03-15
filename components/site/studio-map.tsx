@@ -9,7 +9,7 @@ import { MaterialIcon } from "./material-icon";
 export function StudioMap() {
   return (
     <div className="rounded-xl border border-slate-800 bg-background-deepest/40 p-3">
-      <div className="relative h-72 overflow-hidden rounded-lg border border-slate-800">
+      <div className="relative h-64 overflow-hidden rounded-lg border border-slate-800 sm:h-72">
         <iframe
           allowFullScreen
           className="h-full w-full"
@@ -22,7 +22,7 @@ export function StudioMap() {
       </div>
 
       <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-xs uppercase tracking-widest text-slate-400">
+        <p className="max-w-full break-words text-xs uppercase tracking-widest text-slate-400">
           {COMPANY_ADDRESS_LINE_1} {COMPANY_ADDRESS_LINE_2}
         </p>
         <a

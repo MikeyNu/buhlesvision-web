@@ -25,10 +25,10 @@ export default async function PortfolioPage({
       : projects;
 
   return (
-    <div className="relative bg-background-dark pb-24 text-slate-100">
-      <header className="relative border-b border-white/5 px-6 pb-24 pt-52">
-        <div className="mx-auto max-w-7xl">
-          <h1 className="mb-12 text-8xl font-extrabold leading-[0.85] tracking-tighter md:text-[10rem]">
+    <div className="relative bg-background-dark pb-20 text-slate-100 md:pb-24">
+      <header className="relative overflow-hidden border-b border-white/5 pb-16 pt-28 md:pb-24 md:pt-52">
+        <div className="site-container">
+          <h1 className="mb-10 text-5xl font-extrabold leading-[0.85] tracking-tighter sm:text-7xl md:mb-12 md:text-[10rem]">
             SELECTED
             <br />
             <span className="italic text-primary">WORKS</span>
@@ -38,9 +38,9 @@ export default async function PortfolioPage({
               We transform ambitious brands through high-end editorial design and
               strategic digital presence. Our vision is your competitive edge.
             </p>
-            <div className="flex gap-4">
+            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4">
               <Link
-                className={`rounded-full border px-8 py-3 text-xs font-bold uppercase tracking-widest ${
+                className={`w-full rounded-full border px-6 py-3 text-center text-xs font-bold uppercase tracking-widest sm:w-auto sm:px-8 ${
                   view === "all"
                     ? "border-primary bg-primary text-white"
                     : "border-primary text-primary hover:bg-primary hover:text-white"
@@ -50,7 +50,7 @@ export default async function PortfolioPage({
                 All Projects
               </Link>
               <Link
-                className={`rounded-full border px-8 py-3 text-xs font-bold uppercase tracking-widest ${
+                className={`w-full rounded-full border px-6 py-3 text-center text-xs font-bold uppercase tracking-widest sm:w-auto sm:px-8 ${
                   view === "case-studies"
                     ? "border-primary bg-primary text-white"
                     : "border-slate-700 text-slate-400 hover:border-primary hover:text-primary"
@@ -61,13 +61,12 @@ export default async function PortfolioPage({
               </Link>
             </div>
           </div>
-          <div className="pointer-events-none absolute -right-20 -top-40 -z-10 h-[800px] w-[800px] rounded-full bg-primary/5 blur-[160px]" />
+          <div className="pointer-events-none absolute -right-20 -top-40 -z-10 hidden h-[800px] w-[800px] rounded-full bg-primary/5 blur-[160px] md:block" />
         </div>
       </header>
 
-      <main className="px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-x-12 gap-y-32 md:grid-cols-2">
+      <main className="site-container section-space-y-tight">
+          <div className="grid grid-cols-1 gap-x-12 gap-y-20 md:grid-cols-2 md:gap-y-32">
             {filteredProjects.slice(0, 4).map((project, index) => (
               <article className={index % 2 === 1 ? "group md:mt-48" : "group"} key={project.slug}>
                 <div className="relative mb-8 aspect-[4/5] overflow-hidden border border-white/5 bg-background-deepest">
@@ -89,7 +88,7 @@ export default async function PortfolioPage({
                 </div>
                 <div className="space-y-8">
                   <div>
-                    <h2 className="mb-4 text-5xl font-extrabold uppercase tracking-tighter transition-colors group-hover:text-primary">
+                    <h2 className="mb-4 text-3xl font-extrabold uppercase tracking-tighter transition-colors group-hover:text-primary sm:text-4xl md:text-5xl">
                       {project.title}
                     </h2>
                     <p className="border-l-2 border-primary pl-4 text-lg italic text-slate-400">
@@ -134,7 +133,7 @@ export default async function PortfolioPage({
                     src={filteredProjects[4].coverImage}
                   />
                   <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                    <span className="text-[12rem] font-black uppercase tracking-tighter text-primary/10 md:text-[20rem]">
+                    <span className="hidden text-[12rem] font-black uppercase tracking-tighter text-primary/10 md:block md:text-[20rem]">
                       {filteredProjects[4].title}
                     </span>
                   </div>
@@ -142,14 +141,14 @@ export default async function PortfolioPage({
                 </div>
                 <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-12 md:flex-row">
                   <div className="flex-1">
-                    <h2 className="mb-4 text-6xl font-extrabold uppercase leading-none tracking-tighter transition-colors group-hover:text-primary md:text-8xl">
+                    <h2 className="mb-4 text-4xl font-extrabold uppercase leading-none tracking-tighter transition-colors group-hover:text-primary sm:text-5xl md:text-8xl">
                       {filteredProjects[4].title}
                     </h2>
                     <p className="border-l-2 border-primary pl-4 text-xl italic text-slate-400">
                       {filteredProjects[4].subtitle}
                     </p>
                   </div>
-                  <div className="flex gap-16 border-y border-white/10 py-8 text-[10px] uppercase tracking-[0.3em] md:border-l md:border-y-0 md:pl-16">
+                  <div className="flex flex-wrap gap-8 border-y border-white/10 py-8 text-[10px] uppercase tracking-[0.3em] md:gap-16 md:border-l md:border-y-0 md:pl-16">
                     <div>
                       <span className="mb-3 block text-slate-600">Impact</span>
                       <span className="text-2xl font-extrabold tracking-tighter text-primary">
@@ -173,16 +172,15 @@ export default async function PortfolioPage({
               </article>
             ) : null}
           </div>
-        </div>
       </main>
 
-      <section className="overflow-hidden border-t border-white/10 bg-background-deepest px-6 py-32">
-        <div className="mx-auto max-w-7xl text-center">
+      <section className="section-space-y overflow-hidden border-t border-white/10 bg-background-deepest">
+        <div className="site-container text-center">
           <h2 className="mb-16 text-sm font-bold uppercase tracking-[0.6em] text-slate-600">
             Next Project
           </h2>
-          <Link className="group relative mb-40 inline-block" href="/contact">
-            <span className="block text-7xl font-black uppercase leading-[0.85] tracking-tighter transition-colors group-hover:text-primary md:text-[12rem]">
+          <Link className="group relative mb-24 inline-block md:mb-40" href="/contact">
+            <span className="block text-4xl font-black uppercase leading-[0.85] tracking-tighter transition-colors group-hover:text-primary sm:text-6xl md:text-[12rem]">
               Let&apos;s Build it.
             </span>
             <span className="mt-12 block text-2xl font-bold uppercase tracking-widest text-primary opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">

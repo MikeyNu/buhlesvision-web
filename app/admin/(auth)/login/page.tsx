@@ -42,8 +42,9 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background-deep px-6">
-      <div className="w-full max-w-md rounded-xl border border-stone-800 bg-background-dark p-8">
+    <div className="flex min-h-screen items-center justify-center bg-background-deep">
+      <div className="site-container-reading w-full">
+        <div className="w-full rounded-xl border border-stone-800 bg-background-dark p-6 sm:p-8">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-primary">
           Admin Access
         </p>
@@ -102,6 +103,7 @@ export default function AdminLoginPage() {
           </p>
         ) : null}
         {error ? <p className="mt-4 text-sm text-primary">{error}</p> : null}
+        </div>
       </div>
     </div>
   );

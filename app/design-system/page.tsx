@@ -18,7 +18,7 @@ export default function DesignSystemPage() {
   return (
     <div className="bg-background-dark text-stone-200">
       <nav className="sticky top-0 z-50 border-b border-primary/10 bg-background-dark/80 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+        <div className="site-container flex h-20 items-center justify-between">
           <div className="flex items-center gap-3">
             <BrandLockup
               iconSize="sm"
@@ -37,12 +37,12 @@ export default function DesignSystemPage() {
         </div>
       </nav>
 
-      <main className="mx-auto max-w-7xl px-6 py-20">
+      <main className="site-container py-20">
         <header className="mb-32 max-w-4xl">
           <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.2em] text-primary">
             Design Language System
           </h2>
-          <h1 className="font-editorial text-7xl leading-none text-white lg:text-8xl">
+          <h1 className="font-editorial text-5xl leading-none text-white sm:text-6xl lg:text-8xl">
             Crafting <span className="italic text-primary">High-End</span> Digital
             Experiences.
           </h1>
@@ -55,7 +55,7 @@ export default function DesignSystemPage() {
 
         <div className="grid grid-cols-12 gap-16">
           <aside className="col-span-12 lg:col-span-3">
-            <div className="sticky top-32 flex flex-col gap-8">
+            <div className="flex flex-col gap-8 lg:sticky lg:top-32">
               <div>
                 <h3 className="mb-6 text-xs font-bold uppercase tracking-widest text-primary">
                   Foundations
@@ -230,7 +230,7 @@ export default function DesignSystemPage() {
       </main>
 
       <footer className="border-t border-primary/10 bg-background-dark py-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row">
+        <div className="site-container flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex flex-col gap-2">
             <BrandLockup iconSize="sm" nameClassName="text-base" />
             <span className="text-[10px] uppercase tracking-widest text-stone-500">

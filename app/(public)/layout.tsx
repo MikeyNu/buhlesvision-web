@@ -7,7 +7,7 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background-dark text-stone-100">
       <SiteHeader />
-      <main>{children}</main>
+      <main className="min-w-0">{children}</main>
       <SiteFooter />
     </div>
   );

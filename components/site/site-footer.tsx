@@ -12,14 +12,14 @@ import { BrandLockup } from "./brand-lockup";
 
 export function SiteFooter() {
   return (
-    <footer className="relative border-t border-primary/10 bg-background-dark py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-24 grid grid-cols-1 gap-12 md:grid-cols-4">
+    <footer className="relative border-t border-primary/10 bg-background-dark py-16 md:py-24">
+      <div className="site-container">
+        <div className="mb-14 grid grid-cols-1 gap-12 md:mb-24 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="mb-8">
               <BrandLockup iconSize="sm" nameClassName="text-lg" />
             </div>
-            <p className="max-w-md text-xl font-light text-stone-400">
+            <p className="max-w-md text-lg font-light text-stone-400 sm:text-xl">
               Designing for the bold. Creating for the future. Based digitally,
               working globally.
             </p>
@@ -71,7 +71,7 @@ export function SiteFooter() {
           <div className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 select-none text-[12vw] font-black uppercase leading-none opacity-[0.03]">
             Aesthetic Future
           </div>
-          <div className="flex gap-8 text-xs font-bold uppercase tracking-widest opacity-60">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-bold uppercase tracking-widest opacity-60 sm:gap-8 md:justify-start">
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/terms-of-service">Terms of Service</Link>
           </div>

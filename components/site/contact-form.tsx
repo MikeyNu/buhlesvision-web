@@ -30,7 +30,7 @@ export function ContactForm({ sourcePage, initialInquiryType }: ContactFormProps
             Full Name
           </label>
           <input
-            className="w-full border-0 border-b-2 border-brand-blue/30 bg-transparent px-0 py-3 text-lg placeholder:text-slate-700 transition-colors focus:border-primary focus:ring-0 dark:placeholder:text-slate-500"
+            className="w-full border-0 border-b-2 border-brand-blue/30 bg-transparent px-0 py-3 text-base placeholder:text-slate-700 transition-colors focus:border-primary focus:ring-0 dark:placeholder:text-slate-500 sm:text-lg"
             id="fullName"
             name="fullName"
             placeholder="John Doe"
@@ -49,7 +49,7 @@ export function ContactForm({ sourcePage, initialInquiryType }: ContactFormProps
             Company Name
           </label>
           <input
-            className="w-full border-0 border-b-2 border-brand-blue/30 bg-transparent px-0 py-3 text-lg placeholder:text-slate-700 transition-colors focus:border-primary focus:ring-0 dark:placeholder:text-slate-500"
+            className="w-full border-0 border-b-2 border-brand-blue/30 bg-transparent px-0 py-3 text-base placeholder:text-slate-700 transition-colors focus:border-primary focus:ring-0 dark:placeholder:text-slate-500 sm:text-lg"
             id="companyName"
             name="companyName"
             placeholder="Visionary Inc."
@@ -66,7 +66,7 @@ export function ContactForm({ sourcePage, initialInquiryType }: ContactFormProps
           Inquiry Type
         </label>
         <select
-          className="w-full appearance-none border-0 border-b-2 border-brand-blue/30 bg-transparent px-0 py-3 text-lg transition-colors focus:border-primary focus:ring-0"
+          className="w-full appearance-none border-0 border-b-2 border-brand-blue/30 bg-transparent px-0 py-3 text-base transition-colors focus:border-primary focus:ring-0 sm:text-lg"
           defaultValue={initialInquiryType ?? "Brand Identity"}
           id="inquiryType"
           name="inquiryType"
@@ -93,7 +93,7 @@ export function ContactForm({ sourcePage, initialInquiryType }: ContactFormProps
           Your Message
         </label>
         <textarea
-          className="w-full resize-none border-0 border-b-2 border-brand-blue/30 bg-transparent px-0 py-3 text-lg placeholder:text-slate-700 transition-colors focus:border-primary focus:ring-0 dark:placeholder:text-slate-500"
+          className="w-full resize-none border-0 border-b-2 border-brand-blue/30 bg-transparent px-0 py-3 text-base placeholder:text-slate-700 transition-colors focus:border-primary focus:ring-0 dark:placeholder:text-slate-500 sm:text-lg"
           id="message"
           name="message"
           placeholder="Tell us about your project..."

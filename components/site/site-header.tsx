@@ -21,11 +21,11 @@ export function SiteHeader() {
         headerBgClass,
       )}
     >
-      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
-        <Link className="flex items-center gap-2" href="/">
+      <div className="site-container flex h-20 w-full items-center justify-between">
+        <Link className="min-w-0 flex items-center gap-2" href="/">
           <BrandLockup
             iconSize="sm"
-            nameClassName="text-lg"
+            nameClassName="text-base sm:text-lg"
           />
         </Link>
 
@@ -72,7 +72,7 @@ export function SiteHeader() {
         )}
         id="mobile-menu"
       >
-        <nav className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-6 py-6 text-xs font-semibold uppercase tracking-widest">
+        <nav className="site-container flex w-full flex-col gap-4 py-6 text-xs font-semibold uppercase tracking-widest">
           {navLinks.map((item) => (
             <Link
               className={cn(

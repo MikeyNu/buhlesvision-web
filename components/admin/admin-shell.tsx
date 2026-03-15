@@ -22,8 +22,8 @@ export function AdminShell({ children }: AdminShellProps) {
   const currentPath = usePathname();
 
   return (
-    <div className="min-h-screen bg-background-deep px-6 py-10 text-stone-100">
-      <div className="mx-auto max-w-7xl">
+    <div className="min-h-screen bg-background-deep py-8 text-stone-100 md:py-10">
+      <div className="site-container">
         <header className="mb-10 flex flex-col justify-between gap-6 border-b border-stone-800 pb-6 md:flex-row md:items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">

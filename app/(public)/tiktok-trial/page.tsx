@@ -108,7 +108,7 @@ export const metadata: Metadata = {
 export default function TikTokTrialPage() {
   return (
     <div>
-      <section className="relative min-h-[80vh] overflow-hidden border-b border-stone-800">
+      <section className="relative min-h-[70vh] overflow-hidden border-b border-stone-800 md:min-h-[80vh]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-background-dark via-background-dark/70 to-transparent" />
           <Image
@@ -118,19 +118,19 @@ export default function TikTokTrialPage() {
             src="/images/tiktok-hero.jpg"
           />
         </div>
-        <div className="relative z-20 mx-auto max-w-7xl px-6 py-28">
+        <div className="site-container relative z-20 py-20 md:py-28">
           <div className="max-w-4xl">
             <span className="mb-6 inline-block rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
               TikTok Marketing Package — 30 Day Trial
             </span>
-            <h1 className="mb-8 text-7xl font-extrabold leading-[0.9] tracking-tighter md:text-8xl">
+            <h1 className="mb-8 text-5xl font-extrabold leading-[0.9] tracking-tighter sm:text-6xl md:text-8xl">
               TIKTOK
               <br />
               <span className="italic text-primary">MARKETING</span>
               <br />
               TRIAL.
             </h1>
-            <p className="mb-10 max-w-2xl text-xl leading-relaxed text-stone-400">
+            <p className="mb-10 max-w-2xl text-base leading-relaxed text-stone-400 sm:text-xl">
               A focused 30-day trial designed to improve visibility, engagement,
               and lead generation through strategy, content production, optimization,
               and reporting.
@@ -140,13 +140,13 @@ export default function TikTokTrialPage() {
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
-                className="flex items-center justify-center gap-3 rounded-lg bg-primary px-10 py-5 text-lg font-bold uppercase tracking-tighter text-white"
+                className="flex w-full items-center justify-center gap-3 rounded-lg bg-primary px-6 py-4 text-base font-bold uppercase tracking-tighter text-white sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
                 href="/contact?inquiryType=TikTok%20Trial"
               >
                 Apply for Trial <MaterialIcon name="arrow_forward" />
               </Link>
               <a
-                className="flex items-center justify-center rounded-lg bg-background-deepest px-10 py-5 text-lg font-bold uppercase tracking-tighter"
+                className="flex w-full items-center justify-center rounded-lg bg-background-deepest px-6 py-4 text-base font-bold uppercase tracking-tighter sm:w-auto sm:px-10 sm:py-5 sm:text-lg"
                 href="#package-breakdown"
               >
                 View Package
@@ -156,11 +156,11 @@ export default function TikTokTrialPage() {
         </div>
       </section>
 
-      <section className="bg-background-deepest py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="section-space-y-tight bg-background-deepest">
+        <div className="site-container">
           <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
             <div>
-              <h2 className="mb-4 text-5xl font-extrabold tracking-tighter">
+              <h2 className="mb-4 text-3xl font-extrabold tracking-tighter sm:text-4xl md:text-5xl">
                 Customization <span className="italic text-primary">&amp; Targeting</span>
               </h2>
               <p className="max-w-2xl text-stone-400">
@@ -185,20 +185,20 @@ export default function TikTokTrialPage() {
         </div>
       </section>
 
-      <section className="bg-background-dark py-24">
-        <div className="mx-auto mb-16 max-w-7xl px-6 text-center">
-          <h2 className="mb-4 text-5xl font-extrabold uppercase italic tracking-tighter">
+      <section className="section-space-y-tight bg-background-dark">
+        <div className="site-container mb-12 text-center md:mb-16">
+          <h2 className="mb-4 text-3xl font-extrabold uppercase italic tracking-tighter sm:text-4xl md:text-5xl">
             Key Benefits
           </h2>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-stone-500">
             Unlocking the Power of TikTok Marketing
           </p>
         </div>
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 md:grid-cols-3">
+        <div className="site-container grid grid-cols-1 gap-12 md:grid-cols-3">
           {keyBenefits.map((item) => (
             <article className="group" key={item.number}>
               <div className="mb-6 h-px bg-stone-800 transition-colors group-hover:bg-primary" />
-              <span className="mb-4 block text-6xl font-black italic text-stone-700">
+              <span className="mb-4 block text-5xl font-black italic text-stone-700 md:text-6xl">
                 {item.number}
               </span>
               <h3 className="mb-4 text-2xl font-bold uppercase">{item.title}</h3>
@@ -208,13 +208,13 @@ export default function TikTokTrialPage() {
         </div>
       </section>
 
-      <section className="overflow-hidden border-t border-stone-800 py-24" id="package-breakdown">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="section-space-y-tight overflow-hidden border-t border-stone-800" id="package-breakdown">
+        <div className="site-container">
           <div className="relative mb-20">
-            <h2 className="pointer-events-none absolute -translate-y-16 text-6xl font-black tracking-tighter text-stone-900 md:text-8xl">
+            <h2 className="pointer-events-none absolute -translate-y-16 hidden text-6xl font-black tracking-tighter text-stone-900 md:block md:text-8xl">
               PACKAGE
             </h2>
-            <h2 className="mb-4 text-4xl font-bold tracking-tighter">
+            <h2 className="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl">
               30-Day Trial <span className="italic text-primary">Breakdown</span>
             </h2>
             <p className="text-stone-500">
@@ -255,9 +255,9 @@ export default function TikTokTrialPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-primary py-32">
-        <div className="mx-auto max-w-7xl px-6 text-center text-white">
-          <h2 className="mb-8 text-5xl font-extrabold uppercase italic tracking-tighter md:text-7xl">
+      <section className="relative overflow-hidden bg-primary py-20 md:py-32">
+        <div className="site-container text-center text-white">
+          <h2 className="mb-8 text-4xl font-extrabold uppercase italic tracking-tighter sm:text-5xl md:text-7xl">
             Ready for the Spotlight?
           </h2>
           <p className="mx-auto mb-4 max-w-2xl text-xl opacity-90">
@@ -268,13 +268,13 @@ export default function TikTokTrialPage() {
           </p>
           <div className="flex flex-col justify-center gap-6 sm:flex-row">
             <Link
-              className="rounded-lg bg-white px-12 py-6 text-xl font-black uppercase tracking-tighter text-primary"
+              className="w-full rounded-lg bg-white px-8 py-4 text-base font-black uppercase tracking-tighter text-primary sm:w-auto sm:px-12 sm:py-6 sm:text-xl"
               href="/contact?inquiryType=TikTok%20Trial"
             >
               Claim Your Trial
             </Link>
             <Link
-              className="rounded-lg border-2 border-white/30 px-12 py-6 text-xl font-black uppercase tracking-tighter text-white hover:border-white"
+              className="w-full rounded-lg border-2 border-white/30 px-8 py-4 text-base font-black uppercase tracking-tighter text-white hover:border-white sm:w-auto sm:px-12 sm:py-6 sm:text-xl"
               href="/contact?inquiryType=TikTok%20Trial%20Consultation"
             >
               Talk to a Strategist

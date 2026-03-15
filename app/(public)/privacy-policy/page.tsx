@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="mx-auto max-w-4xl px-6 py-32">
-      <h1 className="mb-8 text-5xl font-extrabold tracking-tighter">Privacy Policy</h1>
+    <section className="site-container-reading section-space-y-tight">
+      <h1 className="mb-8 text-4xl font-extrabold tracking-tighter md:text-5xl">Privacy Policy</h1>
       <div className="space-y-6 text-stone-300">
         <p>
           {COMPANY_LEGAL_NAME} trading as {COMPANY_BRAND_NAME} collects inquiry

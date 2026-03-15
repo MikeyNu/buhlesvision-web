@@ -130,18 +130,18 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="bg-background-deepest pb-20 pt-32 text-off-white">
-      <section className="mx-auto mb-24 max-w-7xl px-6 text-center">
-        <h1 className="mb-8 text-6xl font-light tracking-tight md:text-8xl">
+    <div className="bg-background-deepest pb-20 pt-24 text-off-white md:pt-32">
+      <section className="site-container mb-16 text-center md:mb-24">
+        <h1 className="mb-8 text-4xl font-light tracking-tight sm:text-6xl md:text-8xl">
           Packages <span className="italic text-primary">&amp;</span> Services
         </h1>
-        <p className="mx-auto max-w-2xl text-lg font-light leading-relaxed text-off-white/60 md:text-xl">
+        <p className="mx-auto max-w-2xl text-base font-light leading-relaxed text-off-white/60 sm:text-lg md:text-xl">
           Elevating your digital presence through strategic high-end editorial
           design and content management tailored for the modern luxury market.
         </p>
       </section>
 
-      <section className="mx-auto mb-32 max-w-7xl px-6">
+      <section className="site-container section-space-y-tight">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan) => (
             <article
@@ -195,12 +195,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto mb-32 max-w-7xl px-6">
-        <h2 className="mb-16 text-4xl font-light tracking-tight">
+      <section className="site-container section-space-y-tight">
+        <h2 className="mb-12 text-3xl font-light tracking-tight sm:text-4xl md:mb-16">
           Comprehensive <span className="italic text-primary">Comparison</span>
         </h2>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
+          <table className="min-w-[880px] w-full border-collapse">
             <thead>
               <tr className="border-b border-off-white/10 text-left">
                 <th className="w-1/4 py-8 text-xs font-normal uppercase tracking-widest text-off-white/40">
@@ -243,7 +243,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto mb-32 max-w-7xl px-6">
+      <section className="site-container section-space-y-tight">
         <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <h2 className="mb-4 text-4xl font-light tracking-tight">
@@ -311,14 +311,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto mb-20 max-w-5xl px-6">
-        <div className="relative overflow-hidden rounded-xl bg-primary p-12 text-center md:p-20">
+      <section className="site-container-reading mb-20">
+        <div className="relative overflow-hidden rounded-xl bg-primary p-8 text-center sm:p-12 md:p-20">
           <div className="pointer-events-none absolute inset-0 opacity-10">
             <svg className="h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100">
               <path d="M0 100 L100 0 L100 100 Z" fill="white" />
             </svg>
           </div>
-          <h2 className="relative mb-8 text-4xl font-bold tracking-tighter text-white md:text-6xl">
+          <h2 className="relative mb-8 text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-6xl">
             Ready to redefine
             <br />
             your vision?
@@ -329,13 +329,13 @@ export default function ServicesPage() {
           </p>
           <div className="relative flex flex-col items-center justify-center gap-6 md:flex-row">
             <Link
-              className="bg-white px-10 py-5 text-sm font-bold uppercase tracking-widest text-primary hover:scale-105"
+              className="w-full bg-white px-6 py-4 text-sm font-bold uppercase tracking-widest text-primary hover:scale-105 md:w-auto md:px-10 md:py-5"
               href="/contact?inquiryType=Strategy%20Session"
             >
               Book a Strategy Session
             </Link>
             <Link
-              className="border border-white/40 px-10 py-5 text-sm font-bold uppercase tracking-widest text-white hover:bg-white/10"
+              className="w-full border border-white/40 px-6 py-4 text-sm font-bold uppercase tracking-widest text-white hover:bg-white/10 md:w-auto md:px-10 md:py-5"
               href="/contact?inquiryType=Rate%20Card%20Request"
             >
               Download Rate Card

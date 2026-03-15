@@ -40,23 +40,23 @@ export default async function PortfolioDetailPage({
   }
 
   return (
-    <article className="bg-background-dark pb-24 pt-32 text-slate-100">
-      <header className="mx-auto max-w-7xl px-6">
+    <article className="bg-background-dark pb-20 pt-24 text-slate-100 md:pb-24 md:pt-32">
+      <header className="site-container">
         <Link
           className="mb-8 inline-flex text-xs font-bold uppercase tracking-widest text-primary"
           href="/portfolio"
         >
           ← Back to portfolio
         </Link>
-        <h1 className="mb-6 text-6xl font-extrabold uppercase tracking-tighter md:text-8xl">
+        <h1 className="mb-6 text-4xl font-extrabold uppercase tracking-tighter sm:text-6xl md:text-8xl">
           {project.title}
         </h1>
-        <p className="mb-12 max-w-3xl border-l-2 border-primary pl-4 text-xl italic text-slate-400">
+        <p className="mb-10 max-w-3xl border-l-2 border-primary pl-4 text-lg italic text-slate-400 sm:mb-12 sm:text-xl">
           {project.subtitle}
         </p>
       </header>
 
-      <section className="mx-auto max-w-7xl px-6">
+      <section className="site-container">
         <div className="relative mb-12 aspect-[21/9] overflow-hidden border border-white/10">
           <Image
             alt={project.title}
@@ -68,7 +68,7 @@ export default async function PortfolioDetailPage({
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-[2fr_1fr]">
+      <section className="site-container grid gap-12 md:grid-cols-[2fr_1fr]">
         <div className="space-y-8">
           {project.body.map((paragraph) => (
             <p className="text-lg leading-relaxed text-slate-300" key={paragraph}>
@@ -102,9 +102,9 @@ export default async function PortfolioDetailPage({
         </aside>
       </section>
 
-      <section className="mx-auto mt-20 max-w-7xl px-6">
+      <section className="site-container mt-16 md:mt-20">
         <Link
-          className="inline-flex rounded-full bg-primary px-8 py-4 text-xs font-bold uppercase tracking-widest text-white hover:brightness-110"
+          className="inline-flex w-full justify-center rounded-full bg-primary px-8 py-4 text-xs font-bold uppercase tracking-widest text-white hover:brightness-110 sm:w-auto"
           href={`/contact?inquiryType=${encodeURIComponent(`${project.title} Project`)}`}
         >
           Start a Similar Project

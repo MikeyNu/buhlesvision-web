@@ -23,12 +23,12 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
   const params = await searchParams;
 
   return (
-    <div className="mx-auto min-h-screen max-w-7xl px-8 pb-20 pt-32">
-      <header className="relative mb-24">
+    <div className="site-container min-h-screen pb-20 pt-24 md:pt-32">
+      <header className="relative mb-16 md:mb-24">
         <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-primary">
           Get in touch
         </span>
-        <h1 className="font-display text-7xl font-extrabold leading-none tracking-tighter md:text-9xl">
+        <h1 className="font-display text-5xl font-extrabold leading-none tracking-tighter sm:text-7xl md:text-9xl">
           LET&apos;S BUILD
           <br />
           <span className="text-primary">YOUR VISION.</span>
@@ -40,7 +40,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         </div>
       </header>
 
-      <div className="grid items-start gap-20 lg:grid-cols-2">
+      <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
         <section className="space-y-16">
           <div>
             <h3 className="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
@@ -52,7 +52,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   Email us
                 </p>
                 <a
-                  className="break-all text-3xl font-medium transition-colors hover:text-primary md:text-4xl"
+                  className="break-all text-2xl font-medium transition-colors hover:text-primary sm:text-3xl md:text-4xl"
                   href={COMPANY_EMAIL_MAILTO}
                 >
                   {COMPANY_EMAIL}
@@ -63,7 +63,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   Social Hub
                 </p>
                 <a
-                  className="text-3xl font-medium transition-colors hover:text-primary md:text-4xl"
+                  className="text-2xl font-medium transition-colors hover:text-primary sm:text-3xl md:text-4xl"
                   href={COMPANY_INSTAGRAM_URL}
                   rel="noreferrer"
                   target="_blank"
@@ -88,7 +88,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           <StudioMap />
         </section>
 
-        <section className="rounded-2xl border border-brand-blue/30 bg-white/5 p-8 backdrop-blur-sm md:p-12">
+        <section className="rounded-2xl border border-brand-blue/30 bg-white/5 p-6 backdrop-blur-sm sm:p-8 md:p-12">
           <h2 className="mb-8 text-2xl font-bold">Send an inquiry</h2>
           <ContactForm
             initialInquiryType={params.inquiryType}
